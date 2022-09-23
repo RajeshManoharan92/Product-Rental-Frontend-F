@@ -25,6 +25,10 @@ code {
 
 }
 
+.errors{
+  color: red;
+}
+
 .fontstyle1 {
   font-size: 65px;
   font-weight: bold;
@@ -47,66 +51,43 @@ code {
   text-align: center;
 }
 
-.topgrid {
-  padding-top: 25px;
-  padding-left: 100px;
+
+.bgcolor{
+  background-color: lightseagreen;
+  color: white;
 }
 
-.SB {
-  font-size: 20px;
-  padding-left: 5%;
-
+button{
+  width: 100%;
+  height: 65px 
 }
 
-input[type=number] {
-  margin-left: 25%;
-  width: 42%;
-  height: 5%;
-  font-size: 20px;
+.rowht{
+height: 55%;
 }
 
-.grid {
-  padding: 50px 125px 5px 125px;
+img{
+height: 75%;
 }
 
-.grid1 {
-  padding: 50px 125px 50px 125px;
+.card-img-top {
+  width: 100%;
+  height: 22vw;
+  object-fit: cover;
+  
 }
 
-.cardcolor {
-  background-color: rgb(211, 211, 211);
-  height: 150px;
+.Card{
+  border: 10px solid gray;
+  height: 25vh;
 }
 
-.number {
-  text-align: center;
-  padding-top: 49px;
-  font-size: 30px;
-  color: grey;
+.rowht{
+  min-height: 35px;
 }
 
-.number1 {
-  text-align: center;
-  padding-top: 25px;
-  font-size: 30px;
-  color: grey;
-}
-
-.Button {
-  font-weight: bold;
-  padding-left: 55px;
-  padding-bottom: 50px;
-  background-color: white;
-
-}
-
-.cart {
-  margin-left: 65%;
-  width: 110px;
-}
-
-.cartHomeDp {
-  margin-left: 2%
+.errorrowht{
+  min-height: 25px;
 }
 
 .Cnum {
@@ -118,243 +99,41 @@ input[type=number] {
   color: white;
 }
 
-.home {
-  padding-left: 3%;
+/* Tabel serial Number */
+
+body
+{
+    counter-reset: Serial;           /* Set the Serial counter to 0 */
 }
 
-#B1 {
-  width: 160px;
+table
+{
+    border-collapse: separate;
+    vertical-align: middle;
 }
 
-.cartHome {
-  margin-left: 85%;
-  width: 110px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+tr td:first-child:before
+{
+  counter-increment: Serial;      /* Increment the Serial counter */
+  content: counter(Serial); /* Display the counter */
 }
 
-.Cartgrid {
-  padding: 50px 125px 50px 360px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.CButton {
-
-  font-weight: bold;
-  padding-top: 25px;
-  padding-left: 50px;
-  padding-bottom: 25px;
-  background-color: white;
-  margin-left: 35%;
-}
-
-.cdetails {
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 40px;
-}
-
-table {
-  text-align: center;
-}
-
-/* contact us  */
-
-.input1 {
-  margin-left: 12%
-}
-
-.input2 {
-  margin-left: 8%;
-}
-
-.input3 {
-  margin-left: 6.0%;
-}
-
-.Submitbutton {
-  margin-left: 47%;
-  margin-top: 20px;
-}
-
-label {
-  font-size: 25px;
-  margin-left: 32%;
-  display: inline-block
+table,tr, td, th{
+  vertical-align: middle;
 }
 
 
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.editbtn{
+  width: 100%;
+  height: 100%;
 }
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-.span {
-  margin-left: 32%;
-}
-
-.Cntno {
-  margin-left: 20%
-}
-
-.cntmail {
-  margin-left: 20%
-}
-
-.form {
-  margin-top: 3%;
-}
-
-.Box {
-  margin-left: 2%;
-}
-
-
-.cinputQ {
-  margin-left: 5%;
-}
-
-.cinputTA {
-  margin-left: 2%;
-}
-
-#chkoutbtn {
-  margin-left: 45%;
-  margin-top: 3%;
-}
-
-/* Razorpage */
-
-.cartHomeR {
-  margin-left: 90%;
-  display: inline-block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-.cartHomeRP {
-  margin-left: 85%;
-  display: inline-block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-.cartHomeRPP {
-  margin-left: 75%;
-  display: inline-block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-
-.cartR {
-  margin-left: 5%;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-.tablerazor {
-  margin-top: 3%;
-}
-
-.pay {
-  margin-left: 50%;
-  margin-top: 3%;
-}
-
-
-#rzp-button1 {
-  margin-left: 45%;
-  margin-top: 2%;
-}
-
-
-/* login page */
-
-#loginBTNa {
-  margin-left: 43%;
-  width: 250px;
-  height: 60px;
-  margin-top: 8%
-}
-
-#loginBTNu {
-  margin-left: 43%;
-  width: 250px;
-  height: 60px;
-  margin-top: 5%
-}
-
-/* Admin page */
-
-.logoutbtn {
-  margin-left: 80%;
-  display: inline-block;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-
-
-#AdminBTNa {
-  width: 250px;
-  height: 60px;
-  margin-top: 7%;
-  margin-left: 20%;
-}
-
-
-#AdminBTNb {
-  width: 250px;
-  height: 60px;
-  margin-top: 5%;
-  margin-left: 25%;
-}
-
-
-#AdminBTNc {
-  width: 250px;
-  height: 60px;
-  margin-top: 7%;
-  margin-left: 20%;
-}
-
-
-#AdminBTNd {
-  width: 250px;
-  height: 60px;
-  margin-top: 7%;
-  margin-left: 25%;
-}
-
-/* cartpage */
-
-.cinputFrom {
-  margin-left: 23%;
-}
-
-.cinputTo {
-  margin-left: 57%;
-}
-
-.ctextQ {
-  margin-left: 1%;
-}
-
-.p {
-  margin-left: 60%;
-  color: red;
+table{
+  width: 50%;
 }
