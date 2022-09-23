@@ -115,7 +115,7 @@ export function Createproduct() {
             var Product = [...array.Product];
             Product.push(post.data);
             setarray({ Product });
-            await setformvalue({ ProductName: '', minHours: '', minPrice: '', image: "" })
+            await setformvalue({ ProductName: '', Productcompany: "", Productprice: "", minHours: '', minPrice: '', image: "" })
             alert('created successfully')
         }
     }
