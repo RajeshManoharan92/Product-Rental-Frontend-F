@@ -45,7 +45,7 @@ export function Createproduct() {
         }, [counter])
 
     const data = async () => {
-        var response = await axios.get('http://localhost:3000/product/getproducts')
+        var response = await axios.get('https://product-rental-final.herokuapp.com/product/getproducts')
         setarray({ Product: response.data })
     }
 
@@ -77,7 +77,7 @@ export function Createproduct() {
 
         if (formvalue._id) {
             //Update
-            var response = await axios.put(`http://localhost:3000/product/updateproduct/${formvalue._id}`,
+            var response = await axios.put(`https://product-rental-final.herokuapp.com/product/updateproduct/${formvalue._id}`,
                 {
                     ProductName: formData.ProductName,
                     Productcompany: formData.Productcompany,
@@ -101,7 +101,7 @@ export function Createproduct() {
 
         else {
             //Create
-            var post = await axios.post('http://localhost:3000/product/createproducts', {
+            var post = await axios.post('https://product-rental-final.herokuapp.com/product/createproducts', {
                 ProductName: formData.ProductName,
                 Productcompany: formData.Productcompany,
                 Productprice: formData.Productprice,
@@ -148,7 +148,7 @@ export function Createproduct() {
         var result = window.confirm("Are you sure to delete?");
         if (result) {
             //Deleting data from table
-            var response = axios.delete(`http://localhost:3000/product/deleteproduct/${_id}`)
+            var response = axios.delete(`https://product-rental-final.herokuapp.com/product/deleteproduct/${_id}`)
             var Product = array.Product.filter((row) => row._id !== _id)
             setarray({ Product })
         }

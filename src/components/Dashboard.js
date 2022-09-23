@@ -58,11 +58,11 @@ export function Dashboard({ children }) {
 
     var cartcount = async () => {
         if (userid) {
-            var response = await axios.get(`http://localhost:3000/product/gettotalproductcount/${userid}`)
+            var response = await axios.get(`https://product-rental-final.herokuapp.com/product/gettotalproductcount/${userid}`)
             setcartvalue(response.data.user.length)
         }
         else if (adminid) {
-            var response = await axios.get('http://localhost:3000/product/get')
+            var response = await axios.get('https://product-rental-final.herokuapp.com/product/get')
             setcartvalue(response.data.user.length)
         }
     }
@@ -75,7 +75,7 @@ export function Dashboard({ children }) {
         }, [counter])
 
     const data = async () => {
-        var response = await axios.get('http://localhost:3000/product/getproducts')
+        var response = await axios.get('https://product-rental-final.herokuapp.com/product/getproducts')
         setarray({ Product: response.data })
     }
 
@@ -88,7 +88,7 @@ export function Dashboard({ children }) {
         // Posting datas on database
 
         if (userid) {
-            var post = await axios.post('http://localhost:3000/product/post', {
+            var post = await axios.post('https://product-rental-final.herokuapp.com/product/post', {
                 name: "user",
                 user: userid,
                 ProductName: selectedData.ProductName,
@@ -103,7 +103,7 @@ export function Dashboard({ children }) {
         }
 
         else if (adminid) {
-            var post = await axios.post('http://localhost:3000/product/post', {
+            var post = await axios.post('https://product-rental-final.herokuapp.com/product/post', {
                 name: "admin",
                 user: adminid,
                 ProductName: selectedData.ProductName,

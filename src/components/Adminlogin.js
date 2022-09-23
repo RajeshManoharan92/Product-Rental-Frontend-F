@@ -47,7 +47,7 @@ export function Adminlogin() {
     // On Submit Function
 
     const Login = async (formData) => {
-        var response = await axios.post("http://localhost:3000/product/login", {
+        var response = await axios.post("https://product-rental-final.herokuapp.com/product/login", {
             Role: "admin",
             email: formData.E_mail,
             password: formData.Password,

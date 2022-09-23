@@ -56,12 +56,12 @@ export function Cart() {
 
     const res = async () => {
         if(userid){
-            var response = await axios.get(`http://localhost:3000/product/getuserbyid/${userid}`);
+            var response = await axios.get(`https://product-rental-final.herokuapp.com/product/getuserbyid/${userid}`);
             setarray({ Product: response.data.user.blogs })
             
         }
         else if(adminid){
-            var response = await axios.get('http://localhost:3000/product/get');
+            var response = await axios.get('https://product-rental-final.herokuapp.com/product/get');
             setarray({ Product: response.data.user })
         }
       
@@ -104,7 +104,7 @@ export function Cart() {
             //Update
 
             if(userid){
-                var response = await axios.put(`http://localhost:3000/product/update/${_id}`,
+                var response = await axios.put(`https://product-rental-final.herokuapp.com/product/update/${_id}`,
                 {
                     Productcompany: selectedData.Productcompany,
                     Productprice: selectedData.Productprice,
@@ -116,7 +116,7 @@ export function Cart() {
             }
 
             else if (adminid){
-                var response = await axios.put(`http://localhost:3000/product/updateadminproduct/${_id}`,
+                var response = await axios.put(`https://product-rental-final.herokuapp.com/product/updateadminproduct/${_id}`,
                 {
                     Productcompany: selectedData.Productcompany,
                     Productprice: selectedData.Productprice,
@@ -139,7 +139,7 @@ export function Cart() {
         if(userid){
             var result = window.confirm("Are you sure to Remove?");
             if (result) {
-                var response = await axios.delete(`http://localhost:3000/product/delete/${_id}`)
+                var response = await axios.delete(`https://product-rental-final.herokuapp.com/product/delete/${_id}`)
                 var Product = array.Product.filter((row) => row._id !== _id)
                 setarray({ Product })
     
@@ -152,7 +152,7 @@ export function Cart() {
         else if (adminid) {
             var result = window.confirm("Are you sure to Remove?");
             if (result) {
-                var response = await axios.delete(`http://localhost:3000/product/deleteadmindata/${_id}`)
+                var response = await axios.delete(`https://product-rental-final.herokuapp.com/product/deleteadmindata/${_id}`)
                 var Product = array.Product.filter((row) => row._id !== _id)
                 setarray({ Product })
     

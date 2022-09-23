@@ -45,7 +45,7 @@ export function Contactus() {
 
     const submit = async (formData) => {
         //on submit posting datas to database - Create
-        var post = await axios.post('http://localhost:3000/product/contactus', {
+        var post = await axios.post('https://product-rental-final.herokuapp.com/product/contactus', {
             customername: formData.customername,
             customercontactno: formData.customercontactno,
             productname: formData.productname

@@ -34,7 +34,7 @@ export function Razorpay() {
 
     var res = async () => {
         if (userid) {
-            var response = await axios.get(`http://localhost:3000/product/getuserbyid/${userid}`);
+            var response = await axios.get(`https://product-rental-final.herokuapp.com/product/getuserbyid/${userid}`);
             setarray({ Product: response.data.user.blogs })
             await response.data.user.blogs.map((row) => {
                 Tamount.push(parseInt(row.TotalAMount))
@@ -46,7 +46,7 @@ export function Razorpay() {
             setfinalamount(sum)
         }
         else if (adminid) {
-            var response = await axios.get(`http://localhost:3000/product/getuserbyid/${adminid}`);
+            var response = await axios.get(`https://product-rental-final.herokuapp.com/product/getuserbyid/${adminid}`);
             setarray({ Product: response.data.user.blogs })
         }
 
@@ -62,11 +62,11 @@ export function Razorpay() {
 
     var cartcount = async () => {
         if (userid) {
-            var response = await axios.get(`http://localhost:3000/product/gettotalproductcount/${userid}`)
+            var response = await axios.get(`https://product-rental-final.herokuapp.com/product/gettotalproductcount/${userid}`)
             setcartvalue(response.data.user.length)
         }
         else if (adminid) {
-            var response = await axios.get(`http://localhost:3000/product/gettotalproductcount/${adminid}`)
+            var response = await axios.get(`https://product-rental-final.herokuapp.com/product/gettotalproductcount/${adminid}`)
             setcartvalue(response.data.user.length)
         }
 

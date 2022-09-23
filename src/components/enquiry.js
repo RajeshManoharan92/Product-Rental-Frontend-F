@@ -27,7 +27,7 @@ export function Enquirydetails() {
         }, [])
 
     var result = async () => {
-        var response = await axios.get('http://localhost:3000/product/getcontactusdetails')
+        var response = await axios.get('https://product-rental-final.herokuapp.com/product/getcontactusdetails')
         setarray({ Product: response.data })
     }
 
@@ -37,7 +37,7 @@ export function Enquirydetails() {
 
         var result = window.confirm("Are you sure to delete?");
         if (result) {
-            var response = await axios.delete(`http://localhost:3000/product/deleteenquiry/${_id}`)
+            var response = await axios.delete(`https://product-rental-final.herokuapp.com/product/deleteenquiry/${_id}`)
             var Product = array.Product.filter((row) => row._id !== _id)
             setarray({ Product })
         }

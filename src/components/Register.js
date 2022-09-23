@@ -41,7 +41,7 @@ export function Register() {
     // On Submit Function
 
     var Register = async (formData) => {
-        var response = await axios.post("http://localhost:3000/product/register", {
+        var response = await axios.post("https://product-rental-final.herokuapp.com/product/register", {
             Role: formData.Role,
             firstName: formData.First_Name,
             lastName: formData.Last_Name,

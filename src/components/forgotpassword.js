@@ -40,7 +40,7 @@ export function Forgotpassword() {
     // Onsubmit Function
 
     var Forgotpassword = async (formData) => {
-        var response = await axios.post("http://localhost:3000/product/newpassword", {
+        var response = await axios.post("https://product-rental-final.herokuapp.com/product/newpassword", {
             Role: formData.Role,
             email: formData.E_mail,
             password: formData.New_Password
